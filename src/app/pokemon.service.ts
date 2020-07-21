@@ -12,7 +12,7 @@ export class PokemonService {
     return this.http.get(URL);
   }
   getAllPokemon() {
-    const URL = environment.baseURL + 'pokemon';
+    const URL = environment.baseURL + 'pokemon?offset=0&limit=1000';
     return this.http.get(URL);
   }
 }

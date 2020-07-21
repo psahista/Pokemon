@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -7,7 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PokemonCardComponent implements OnInit {
   @Input() message;
-  constructor() {}
+  constructor(private route: Router) {}
 
   ngOnInit(): void {}
+  seeDetails() {
+    console.log(this.message.name);
+    localStorage.setItem('name', this.message.name);
+    this.route.navigate(['/pokemonDetails']);
+  }
 }

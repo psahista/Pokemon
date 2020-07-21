@@ -1,0 +1,12 @@
+.main-screen {
+  padding: 20px;
+}
+.search-box {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.baground-style ::ng-deep {
+  .bg-dark {
+    background-color: #2600ff !important;
+  }
+}
